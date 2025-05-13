@@ -1,13 +1,13 @@
 import mysql.connector
 
-
-connection = mysql.connector.connect(
-   user='daichit',
-   password='230958233',
-   host='10.8.37.226',
-   database='daichit_db'
-)
-
+def get_database_connection():
+   connection = mysql.connector.connect(
+      user='daichit',
+      password='230958233',
+      host='10.8.37.226',
+      database='daichit_db'
+   )
+   return connection
 
 cursor = connection.cursor()
 
